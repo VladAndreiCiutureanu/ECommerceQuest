@@ -1,0 +1,37 @@
+@ECommerceQuest.API_HostAddress = http://localhost:5073
+@token = Bearer eyJhbGc... 
+
+### Register
+POST {{ECommerceQuest.API_HostAddress}}/api/auth/register
+Content-Type: application/json
+
+{
+    "email": "ion@gmail.com",
+    "username": "ion",
+    "fullName": "Ion Pop",
+    "password": "parola123"
+}
+
+### Login
+POST {{ECommerceQuest.API_HostAddress}}/api/auth/login
+Content-Type: application/json
+
+{
+    "emailOrUsername": "ion@gmail.com",
+    "password": "parola123"
+}
+
+### Get Products
+GET {{ECommerceQuest.API_HostAddress}}/api/products
+
+### Checkout
+POST {{ECommerceQuest.API_HostAddress}}/api/orders/checkout
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+    "shippingAddress": "Strada X, Nr. 1",
+    "items": [
+        { "productId": 1, "quantity": 2 }
+    ]
+}

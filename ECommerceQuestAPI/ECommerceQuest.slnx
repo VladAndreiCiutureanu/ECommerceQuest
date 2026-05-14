@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="ECommerceQuest.API.Tests/ECommerceQuest.API.Tests.csproj" Id="27bacad6-589a-410f-b598-c65e1cbc306e" />
+  <Project Path="ECommerceQuest.API/ECommerceQuest.API.csproj" />
+</Solution>
